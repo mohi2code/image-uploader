@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const API_URL = 'http://localhost:1337';
+const API_URL = 'http://localhost:1337/api/v1';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -36,7 +36,7 @@ function App({API_URL}) {
 
         const formData = new FormData();
         formData.append('image', file);
-        axios.post(API_URL, formData, {
+        axios.post(`${API_URL}/`, formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
