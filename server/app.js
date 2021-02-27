@@ -6,6 +6,7 @@ const v1 = require('./api/v1');
 
 const app = express();
 
+app.use(express.static('public/uploads'))
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());

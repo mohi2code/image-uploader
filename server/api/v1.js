@@ -10,17 +10,12 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 const router = express.Router();
-
-router.get('/', (req, res) => {
-    res.json({
-      message: 'IT worked !!!'
-    });
-});
   
 router.post('/', upload.single('image'), (req, res) => {
-    console.log(req.file);
+  console.log(req.file);
     res.json({
-      message: 'Worked'
+      recieved: true,
+      filename: req.file.filename
     });
 });
 

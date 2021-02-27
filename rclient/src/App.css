@@ -51,6 +51,16 @@ button {
     border-radius: 12px;
 }
 
+.after{
+    width: 338px;
+    height: 219px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
 .highlight{
     background: #c6dcfd;
     border: 1px solid #97BEF4;
