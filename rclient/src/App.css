@@ -26,6 +26,15 @@ button {
     border-radius: 8px;
 }
 
+#upload{
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #2F80ED;
+    padding: 5px 11px;
+    border: 1px solid #2F80ED;
+    border-radius: 8px;
+}
+
 .upload-wrap{
     width: 402px;
     height: 469px;

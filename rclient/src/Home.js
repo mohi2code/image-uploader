@@ -40,6 +40,16 @@ export default function Home({setImage}) {
   
       return false;
     }
+
+    function upload(e) {
+      document.getElementById('upload').click()
+    }
+
+    function change(e) {
+      const file = e.target.files[0];
+      setImage({file});
+      history.push('/loading');
+    }
       
     return (
       <main>
@@ -53,7 +63,10 @@ export default function Home({setImage}) {
             <h6 style={{fontSize: '12px', color: '#BDBDBD', marginTop: 'auto'}}>Drag & Drop your image here</h6>
           </div>
           <h6 style={{fontSize: '12px', color: '#BDBDBD'}}>Or</h6>
-          <button>Choose a file</button>
+          <div>
+            <input onChange={change} id="upload" style={{display: 'none'}} type="file" accept="image/png, image/jpeg"></input>
+            <button onClick={upload}>Choose a file</button>
+          </div>
         </section>
       </main>
     );
