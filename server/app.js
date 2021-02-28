@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors')
 const cookieParser = require('cookie-parser');
@@ -6,13 +7,13 @@ const v1 = require('./api/v1');
 
 const app = express();
 
-app.use(express.static('public/uploads'))
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(express.static(path.join(__dirname, 'build')))
 app.use('/api/v1', v1);
 
 // catch 404 and forward to error handler
